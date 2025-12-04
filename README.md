@@ -3,7 +3,7 @@
 ## Description of the Project
 
 A Java console app designed for salesmen and sales managers at a car dealership.
-It loads dealership and vehicle data from a CSV file, letting users view and search inventory by make, model, year, or price.
+It loads dealership and vehicle data from car_dealership database using JDBC, letting users view and search inventory by make, model, year, or price.
 The program provides a quick, text-based way to manage and explore vehicle listings right from the desktop.
 
 ## User Stories
