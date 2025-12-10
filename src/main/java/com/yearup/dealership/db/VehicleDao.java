@@ -126,18 +126,73 @@ public class VehicleDao {
     }
 
     public List<Vehicle> searchByColor(String color) {
-        // TODO: Implement the logic to search vehicles by color
-        return new ArrayList<>();
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        String getByColorQuery = "SELECT * FROM vehicles WHERE UPPER(color) = UPPER(?)";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement selectStatement = connection.prepareStatement(getByColorQuery)) {
+            selectStatement.setString(1, color);// Set the parameter in the query.
+            try (ResultSet resultSet = selectStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    // Extract data from the result set.
+
+                    // Create vehicle object.
+                    Vehicle vehicle = createVehicleFromResultSet(resultSet);
+                    vehicles.add(vehicle);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Log or handle the SQL exception.
+        }
+        return vehicles;
     }
 
     public List<Vehicle> searchByMileageRange(int minMileage, int maxMileage) {
-        // TODO: Implement the logic to search vehicles by mileage range
-        return new ArrayList<>();
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        String getByMileageRangeQuery = "SELECT * FROM vehicles WHERE odometer BETWEEN ? AND ?";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement selectStatement = connection.prepareStatement(getByMileageRangeQuery)) {
+            selectStatement.setInt(1, minMileage);
+            selectStatement.setInt(2, maxMileage);// Set the parameter in the query.
+            try (ResultSet resultSet = selectStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    // Extract data from the result set.
+
+                    // Create vehicle object.
+                    Vehicle vehicle = createVehicleFromResultSet(resultSet);
+                    vehicles.add(vehicle);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Log or handle the SQL exception.
+        }
+        return vehicles;
     }
 
     public List<Vehicle> searchByType(String type) {
-        // TODO: Implement the logic to search vehicles by type
-        return new ArrayList<>();
+        // TODO:
+        List<Vehicle> vehicles = new ArrayList<>();
+        String getByTypeQuery = "SELECT * FROM vehicles WHERE UPPER(vehicleType) = UPPER(?)";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement selectStatement = connection.prepareStatement(getByTypeQuery)) {
+            selectStatement.setString(1, type);// Set the parameter in the query.
+            try (ResultSet resultSet = selectStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    // Extract data from the result set.
+
+                    // Create vehicle object.
+                    Vehicle vehicle = createVehicleFromResultSet(resultSet);
+                    vehicles.add(vehicle);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Log or handle the SQL exception.
+        }
+        return vehicles;
     }
 
     private Vehicle createVehicleFromResultSet(ResultSet resultSet) throws SQLException {
