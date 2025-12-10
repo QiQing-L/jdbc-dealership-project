@@ -63,6 +63,7 @@ Outline potential future enhancements or functionalities you might consider addi
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
 - [potato-sensei](https://chatgpt.com/g/g-681d378b0c90819197b16e49abe384ec-potato-sensei)
+- [Convert Date to LocalDate or LocalDateTime and Back](https://www.baeldung.com/java-date-to-localdate-and-localdatetime)
 
 
 ## Team Members

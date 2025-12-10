@@ -23,7 +23,7 @@ public class SalesDao {
              PreparedStatement insertStatement = connection.prepareStatement(insertDataQuery, Statement.RETURN_GENERATED_KEYS)) {
             // Setting parameters for the insert query.
             insertStatement.setString(1, salesContract.getVin());
-            insertStatement.setDate(2, salesContract.getSaleDate());
+            insertStatement.setDate(2, java.sql.Date.valueOf(salesContract.getSaleDate()));
             insertStatement.setDouble(3, salesContract.getPrice());
 
             int affectedRows = insertStatement.executeUpdate(); // Execute the insert query.

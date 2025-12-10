@@ -23,8 +23,8 @@ public class LeaseDao {
              PreparedStatement insertStatement = connection.prepareStatement(insertDataQuery, Statement.RETURN_GENERATED_KEYS)) {
             // Setting parameters for the insert query.
             insertStatement.setString(1, leaseContract.getVin());
-            insertStatement.setDate(2, leaseContract.getLeaseStart());
-            insertStatement.setDate(3, leaseContract.getLeaseEnd());
+            insertStatement.setDate(2, java.sql.Date.valueOf(leaseContract.getLeaseStart()));
+            insertStatement.setDate(3, java.sql.Date.valueOf(leaseContract.getLeaseEnd()));
             insertStatement.setDouble(4, leaseContract.getMonthlyPayment());
 
             int affectedRows = insertStatement.executeUpdate(); // Execute the insert query.
