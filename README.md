@@ -10,13 +10,12 @@ The program provides a quick, text-based way to manage and explore vehicle listi
 
 List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
 
-- As a user, I want to be able to see a list of ALL vehicles, so that I know what's on the list
 - As a user, I want to be able to find vehicles within a price range , so that I don't have to spend time looking through vehicles that's not in the price range.
 - As a user, I want to be able to find vehicles by make / model, color, mileage range, and type , so that I can easily go through vehicles that fit my client's needs.
 - As a user, I want to be able to find vehicles by year range, so that I can easily go through all vehicles that fits the year range.
 - As a user, I want to be able to add a vehicle to the dealership's inventory, so that the dealership's inventory is up to date.
 - As a user, I want to be able to remove a vehicle in the dealership's inventory, so that the dealership's inventory is up to date
-- I want to be able to choose the option 99 - Quit so that I can exit the application easily when I’m done using it
+
 
 ## Setup
 
