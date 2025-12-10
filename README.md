@@ -10,12 +10,11 @@ The program provides a quick, text-based way to manage and explore vehicle listi
 
 List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
 
-- As a user, I want to be able to find vehicles within a price range , so that I don't have to spend time looking through vehicles that's not in the price range.
-- As a user, I want to be able to find vehicles by make / model, color, mileage range, and type , so that I can easily go through vehicles that fit my client's needs.
-- As a user, I want to be able to find vehicles by year range, so that I can easily go through all vehicles that fits the year range.
-- As a user, I want to be able to add a vehicle to the dealership's inventory, so that the dealership's inventory is up to date.
-- As a user, I want to be able to remove a vehicle in the dealership's inventory, so that the dealership's inventory is up to date
-
+- As a user, I want to be able to find vehicles by make / model, color, price range, year range, mileage range, and type from the database, so that I can easily go through vehicles that fit my client's needs.
+- As a user, I want to be able to add and remove a vehicle from the vehicles database, so that the database is up to date.
+- As a user, I want to be able to add / remove a vehicle to the dealership's inventory, so that the dealership's inventory is up to date.
+- As a user, I want to be able to add a Lease Contract to the database, so that the database is up to date.
+- As a user, I want to be able to add a sales Contract to the database, so that the database is up to date.
 
 ## Setup
 
