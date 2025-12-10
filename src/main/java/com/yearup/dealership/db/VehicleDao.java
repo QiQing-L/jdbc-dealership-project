@@ -78,7 +78,7 @@ public class VehicleDao {
     }
 
     public List<Vehicle> searchByMakeModel(String make, String model) {
-        // TODO: Implement the logic to search vehicles by make and model
+
         List<Vehicle> vehicles = new ArrayList<>();
         String getByMakeModelQuery = "SELECT * FROM vehicles WHERE make = ? AND model = ?";
 
